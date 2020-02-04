@@ -66,22 +66,6 @@ $(document).keypress(function (e) {
     $('#target-letter').text(currentLetter);
 
   }
-  // let numberOfWords = 54;
-  // numberOfWords / minutes -2 * NumberofMistakes
-  if (sentIndex > sentences.length - 1) {
-    finish = event.timeStamp;
-    let time = (finish - start);
-    time /= 600000;
-    let speed = Math.round((54 / time) - (errors * 2));
-    $("#next-letter").text("Your score is " + speed + " words per minute");
-    setTimeout(function () {
-      let tryAgain = confirm("Would you like to try again?");
-      if (tryAgain == true) {
-        window.location.reload();
-      } else {
-        return;
-      };
-    }, 4000);
-  }
+  
 
 })
